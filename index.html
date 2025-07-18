@@ -3,213 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site Web</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 20px 0;
-            margin-bottom: 40px;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        h1 {
-            color: white;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2em;
-            font-weight: 300;
-        }
-
-        main {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: #4a5568;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 5px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: #666;
-            font-size: 1.1em;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            margin-top: 20px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            font-size: 1.3em;
-            margin-bottom: 15px;
-        }
-
-        footer {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.8);
-            padding: 20px 0;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            main {
-                padding: 20px;
-            }
-        }
-    </style>
+    <title>Mathématiques - Ressources pédagogiques</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Bienvenue sur mon site</h1>
-            <p class="subtitle">Découvrez ce que j'ai à offrir</p>
-        </header>
+        <!-- Navigation latérale -->
+        <nav class="sidebar">
+            <h2>📚 Mathématiques</h2>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" data-page="home">🏠 Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="cours">📖 Cours</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="exercices">✏️ Exercices</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="interrogations">🔍 Interrogations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="devoirs-surveilles">📝 Devoirs surveillés</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="devoirs-maison">🏠 Devoirs maison</a>
+                </li>
+            </ul>
+        </nav>
 
-        <main>
-            <section class="section">
-                <h2>À propos</h2>
-                <p>Bienvenue sur mon site web ! Cette page d'accueil présente mon travail et mes services. Je suis passionné par la création de solutions web modernes et efficaces.</p>
-                <p>N'hésitez pas à explorer les différentes sections pour en savoir plus sur ce que je peux vous offrir.</p>
-                <a href="#contact" class="cta-button">Me contacter</a>
-            </section>
-
-            <section class="section">
-                <h2>Mes services</h2>
-                <div class="features">
-                    <div class="feature-card">
-                        <h3>Développement Web</h3>
-                        <p>Création de sites web modernes et responsives adaptés à vos besoins.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Design UI/UX</h3>
-                        <p>Conception d'interfaces utilisateur intuitives et attrayantes.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Consultation</h3>
-                        <p>Accompagnement et conseils pour vos projets numériques.</p>
+        <!-- Zone de contenu principale -->
+        <main class="main-content">
+            <!-- Page d'accueil -->
+            <div class="page active" id="home">
+                <div class="home-page">
+                    <h1>Bienvenue sur votre espace mathématiques</h1>
+                    <p>Découvrez toutes les ressources pédagogiques organisées par rubriques</p>
+                    
+                    <div class="welcome-features">
+                        <div class="feature">
+                            <h3>📖 Cours</h3>
+                            <p>Supports de cours détaillés et structurés</p>
+                        </div>
+                        <div class="feature">
+                            <h3>✏️ Exercices</h3>
+                            <p>Entraînements progressifs avec corrections</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🔍 Évaluations</h3>
+                            <p>Interrogations et devoirs pour progresser</p>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="section" id="contact">
-                <h2>Contact</h2>
-                <p>Vous avez un projet en tête ? Je serais ravi de discuter avec vous de vos idées et de voir comment je peux vous aider à les concrétiser.</p>
-                <p><strong>Email :</strong> contact@monsite.com</p>
-                <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
-            </section>
+            <!-- Page Cours -->
+            <div class="page" id="cours">
+                <div class="page-header">
+                    <h1>📖 Cours</h1>
+                    <p>Supports de cours et fiches de révision</p>
+                </div>
+                <div class="documents-grid">
+                    <div class="document-card" onclick="openDocument('Cours/chapitre1.pdf')">
+                        <div class="pdf-icon">📄</div>
+                        <div class="document-title">Chapitre 1 -
+                        Compléments d'algèbre linéaire</div>
+                        <div class="document-description">Sommes de
+                        sous-espaces, calcul matriciel par bloc,
+                        éléments propres d'un endomorphisme ou d'une matrice</div>
+                    </div>
+                    <div class="document-card" onclick="openDocument('Cours/chapitre2.pdf')">
+                        <div class="pdf-icon">📄</div>
+                        <div class="document-title">Chapitre 2 - Dérivation</div>
+                        <div class="document-description">Calcul différentiel et applications</div>
+                    </div>
+                    <div class="document-card" onclick="openDocument('Cours/chapitre3.pdf')">
+                        <div class="pdf-icon">📄</div>
+                        <div class="document-title">Chapitre 3 - Géométrie</div>
+                        <div class="document-description">Géométrie dans l'espace et le plan</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Exercices -->
+            <div class="page" id="exercices">
+                <div class="page-header">
+                    <h1>✏️ Exercices</h1>
+                    <p>Exercices d'entraînement et de consolidation</p>
+                </div>
+                <div class="documents-grid">
+                    <div class="document-card" onclick="openDocument('Exercices/fiche_exos1.pdf')">
+                        <div class="pdf-icon">📄</div>
+                        <div class="document-title">
+                        1. Compléments d'algèbre linéaire</div>
+                        <div class="document-description">Fiche
+                        d'exercices associée au chapitre 1</div>
+                    </div>
+                    <div class="document-card" onclick="openDocument('Exercices/exercices_derivation.pdf')">
+                        <div class="pdf-icon">📄</div>
+                        <div class="document-title">Exercices - Dérivation</div>
+                        <div class="document-description">Calculs de dérivées et applications</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Interrogations -->
+            <div class="page" id="interrogations">
+                <div class="page-header">
+                    <h1>🔍 Interrogations</h1>
+                    <p>Interrogations courtes et évaluations rapides</p>
+                </div>
+                <div class="documents-grid">
+                    <div class="document-card" onclick="openDocument('Interrogations/interro_1.pdf')">
+                        <div class="pdf-icon">📄</div>
+                        <div class="document-title">Interrogation 1</div>
+                        <div class="document-description">Évaluation sur les fonctions</div>
+                    </div>
+                    <div class="document-card" onclick="openDocument('Interrogations/interro_2.pdf')">
+                        <div class="pdf-icon">📄</div>
+                        <div class="document-title">Interrogation 2</div>
+                        <div class="document-description">Évaluation sur la dérivation</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Devoirs surveillés -->
+            <div class="page" id="devoirs-surveilles">
+                <div class="page-header">
+                    <h1>📝 Devoirs surveillés</h1>
+                    <p>Devoirs en temps limité et évaluations importantes</p>
+                </div>
+                <div class="documents-grid">
+                    <div class="document-card" onclick="openDocument('Devoirs-surveilles/ds_1.pdf')">
+                        <div class="pdf-icon">📄</div>
+                        <div class="document-title">Devoir surveillé 1</div>
+                        <div class="document-description">Évaluation complète - Trimestre 1</div>
+                    </div>
+                    <div class="document-card" onclick="openDocument('Devoirs-surveilles/ds_2.pdf')">
+                        <div class="pdf-icon">📄</div>
+                        <div class="document-title">Devoir surveillé 2</div>
+                        <div class="document-description">Évaluation complète - Trimestre 2</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Devoirs maison -->
+            <div class="page" id="devoirs-maison">
+                <div class="page-header">
+                    <h1>🏠 Devoirs maison</h1>
+                    <p>Travaux à réaliser à la maison et projets</p>
+                </div>
+                <div class="documents-grid">
+                    <div class="document-card" onclick="openDocument('Devoirs-maison/dm_1.pdf')">
+                        <div class="pdf-icon">📄</div>
+                        <div class="document-title">Devoir maison 1</div>
+                        <div class="document-description">Recherche approfondie sur les fonctions</div>
+                    </div>
+                    <div class="document-card" onclick="openDocument('Devoirs-maison/dm_2.pdf')">
+                        <div class="pdf-icon">📄</div>
+                        <div class="document-title">Devoir maison 2</div>
+                        <div class="document-description">Projet sur la géométrie analytique</div>
+                    </div>
+                </div>
+            </div>
         </main>
-
-        <footer>
-            <p>&copy; 2025 Mon Site Web. Tous droits réservés.</p>
-        </footer>
     </div>
 
     <script>
-        // Animation au chargement de la page
-        window.addEventListener('load', function() {
-            const elements = document.querySelectorAll('header, main, footer');
-            elements.forEach((element, index) => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                
-                setTimeout(() => {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }, index * 200);
+        // Gestion de la navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Retirer la classe active de tous les liens
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Ajouter la classe active au lien cliqué
+                    this.classList.add('active');
+                    
+                    // Cacher toutes les pages
+                    pages.forEach(page => page.classList.remove('active'));
+                    
+                    // Afficher la page correspondante
+                    const targetPage = this.getAttribute('data-page');
+                    document.getElementById(targetPage).classList.add('active');
+                });
             });
         });
 
-        // Smooth scroll pour les liens d'ancrage
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
+        // Fonction pour ouvrir un document avec gestion des sous-répertoires
+	function openDocument(filepath) {
+            // Tentative d'ouverture du document
+            window.open(filepath, '_blank');
+            
+            // Message informatif pour l'utilisateur
+            const fileName = filepath.split('/').pop();
+            const folderName = filepath.split('/')[0];
+            
+            console.log(`Ouverture du document : ${fileName} depuis le répertoire ${folderName}`);
+            
+            // Optionnel : afficher un message d'erreur si le fichier n'existe pas
+            // Cette vérification peut être ajoutée selon vos besoins
+        }
+
+        // Animation d'entrée
+        window.addEventListener('load', function() {
+            const sidebar = document.querySelector('.sidebar');
+            const mainContent = document.querySelector('.main-content');
+            
+            sidebar.style.opacity = '0';
+            sidebar.style.transform = 'translateX(-50px)';
+            mainContent.style.opacity = '0';
+            mainContent.style.transform = 'translateX(50px)';
+            
+            setTimeout(() => {
+                sidebar.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                mainContent.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                
+                sidebar.style.opacity = '1';
+                sidebar.style.transform = 'translateX(0)';
+                
+                setTimeout(() => {
+                    mainContent.style.opacity = '1';
+                    mainContent.style.transform = 'translateX(0)';
+                }, 200);
+            }, 100);
         });
     </script>
 </body>
