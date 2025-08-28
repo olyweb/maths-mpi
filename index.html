@@ -1,196 +1,243 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathématiques - Ressources pédagogiques</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- Navigation latérale -->
-        <nav class="sidebar">
-            <h2>📚 Mathématiques</h2>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link active" data-page="home">🏠 Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link" data-page="cours">📖 Cours</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link" data-page="exercices">✏️ Exercices</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link" data-page="interrogations">🔍 Interrogations</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link" data-page="devoirs-surveilles">📝 Devoirs surveillés</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link" data-page="devoirs-maison">🏠 Devoirs maison</a>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- Zone de contenu principale -->
-        <main class="main-content">
-            <!-- Page d'accueil -->
-            <div class="page active" id="home">
-                <div class="home-page">
-                    <h1>Bienvenue sur votre espace mathématiques</h1>
-                    <p>Découvrez toutes les ressources pédagogiques organisées par rubriques</p>
-                    
-                    <div class="welcome-features">
-                        <div class="feature">
-                            <h3>📖 Cours</h3>
-                            <p>Supports de cours détaillés et structurés</p>
-                        </div>
-                        <div class="feature">
-                            <h3>✏️ Exercices</h3>
-                            <p>Entraînements progressifs avec corrections</p>
-                        </div>
-                        <div class="feature">
-                            <h3>🔍 Évaluations</h3>
-                            <p>Interrogations et devoirs pour progresser</p>
-                        </div>
-                    </div>
-                </div>
+      <!-- Navigation latérale -->
+      <nav class="sidebar">
+        <h2>📚 Mathématiques</h2>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" data-page="home">🏠 Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-page="cours">📖 Cours</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-page="exercices">✏️ Exercices</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-page="interrogations">🔍 Interrogations</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-page="devoirs-surveilles">📝 Devoirs surveillés</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-page="devoirs-maison">🏠 Devoirs maison</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- Zone de contenu principale -->
+      <main class="main-content">
+        <!-- Page d'accueil -->
+        <div class="page active" id="home">
+          <div class="home-page">
+            <h1>Mathématiques en MPI/MPI* au lycée Colbert</h1>
+            <p>Ressources pédagogiques organisées par rubriques</p>
+            
+            <div class="welcome-features">
+              <div class="feature">
+                <h3>📖 Cours</h3>
+                <p>Polycopiés de cours, chapitre par chapitre</p>
+              </div>
+	      <div class="feature">
+                <h3>💻 Slides</h3>
+                <p>Diapositives de cours associées à chaque chapitre</p>
+              </div>
+              <div class="feature">
+                <h3>✏️ Exercices</h3>
+                <p>Fiches d'exercices associées à chaque chapitre</p>
+              </div>
+              <div class="feature">
+                <h3>🔍 Interrogations</h3>
+                <p>Interrogations hebdomadaires pour chaque
+                  chapitre</p>
+	      </div>
             </div>
-
-            <!-- Page Cours -->
-            <div class="page" id="cours">
-                <div class="page-header">
-                    <h1>📖 Cours</h1>
-                    <p>Supports de cours et fiches de révision</p>
-                </div>
-                <div class="documents-grid">
-                    <div class="document-card" onclick="openDocument('Cours/chapitre1.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">Chapitre 1 -
-                        Compléments d'algèbre linéaire</div>
-                        <div class="document-description">Sommes de
-                        sous-espaces, calcul matriciel par bloc,
-                        éléments propres d'un endomorphisme ou d'une matrice</div>
-                    </div>
-                    <div class="document-card" onclick="openDocument('Cours/chapitre2.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">Chapitre 2 -
-                        Réduction des endomorphismes</div>
-                        <div class="document-description">Polynôme
-                        caractéristiques, diagonalisation et
-                        trigonalisation, utilisation des polynômes d'endomorphismes</div>
-                    </div>
-                    <div class="document-card" onclick="openDocument('Cours/chapitre3.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">Chapitre 3 -
-                        Espaces vectoriels normés</div>
-                        <div class="document-description">Norme sur
-                        un espace vectoriel, suites et topologie d'un
-                        espace vectoriel normé</div>
-                    </div>
-		    <div class="document-card" onclick="openDocument('Cours/chapitre4.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">Chapitre 4 -
-                        Continuité des fonctions dans les evn,
-                        dimension finie</div>
-                        <div class="document-description">Limite d'une
-                        fonction, continuité et linéarité, cas de la
-                        dimension finie.</div>
-                    </div>
-                </div>
+          </div>
+	  
+          <!-- Page Cours -->
+          <div class="page" id="cours">
+            <div class="page-header">
+              <h1>📖 Cours</h1>
+              <p>Supports de cours et fiches de révision</p>
             </div>
-
-            <!-- Page Exercices -->
-            <div class="page" id="exercices">
-                <div class="page-header">
-                    <h1>✏️ Exercices</h1>
-                    <p>Exercices d'entraînement et de consolidation</p>
-                </div>
-                <div class="documents-grid">
-                    <div class="document-card" onclick="openDocument('Exercices/fiche_exos1.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">
-                        1. Compléments d'algèbre linéaire</div>
-                        <div class="document-description">Fiche
-                        d'exercices associée au chapitre 1</div>
-                    </div>
-                    <div class="document-card" onclick="openDocument('Exercices/exercices_derivation.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">Exercices - Dérivation</div>
-                        <div class="document-description">Calculs de dérivées et applications</div>
-                    </div>
-                </div>
+            <div class="documents-grid">
+              <div class="document-card" onclick="openDocument('Cours/chapitre1.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Chapitre 1 -
+                  Compléments d'algèbre linéaire</div>
+                <div class="document-description">Sommes de
+                  sous-espaces, calcul matriciel par bloc,
+                  éléments propres d'un endomorphisme ou d'une matrice</div>
+              </div>
+              <div class="document-card" onclick="openDocument('Cours/chapitre2.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Chapitre 2 -
+                  Réduction des endomorphismes</div>
+                <div class="document-description">Polynôme
+                  caractéristiques, diagonalisation et
+                  trigonalisation, utilisation des polynômes d'endomorphismes</div>
+              </div>
+              <div class="document-card" onclick="openDocument('Cours/chapitre3.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Chapitre 3 -
+                  Espaces vectoriels normés</div>
+                <div class="document-description">Norme sur
+                  un espace vectoriel, suites et topologie d'un
+                  espace vectoriel normé</div>
+              </div>
+	      <div class="document-card" onclick="openDocument('Cours/chapitre4.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Chapitre 4 -
+                  Continuité des fonctions dans les evn,
+                  dimension finie</div>
+                <div class="document-description">Limite d'une
+                  fonction, continuité et linéarité, cas de la
+                  dimension finie.</div>
+              </div>
             </div>
+          </div>
 
-            <!-- Page Interrogations -->
-            <div class="page" id="interrogations">
-                <div class="page-header">
-                    <h1>🔍 Interrogations</h1>
-                    <p>Interrogations courtes et évaluations rapides</p>
-                </div>
-                <div class="documents-grid">
-                    <div class="document-card" onclick="openDocument('Interrogations/interro_1.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">Interrogation 1</div>
-                        <div class="document-description">Évaluation sur les fonctions</div>
-                    </div>
-                    <div class="document-card" onclick="openDocument('Interrogations/interro_2.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">Interrogation 2</div>
-                        <div class="document-description">Évaluation sur la dérivation</div>
-                    </div>
-                </div>
+	  <!-- Page Slides -->
+          <div class="page" id="slides">
+            <div class="page-header">
+              <h1>📖 Slides</h1>
+              <p>Supports de cours et fiches de révision</p>
             </div>
-
-            <!-- Page Devoirs surveillés -->
-            <div class="page" id="devoirs-surveilles">
-                <div class="page-header">
-                    <h1>📝 Devoirs surveillés</h1>
-                    <p>Devoirs en temps limité et évaluations importantes</p>
-                </div>
-                <div class="documents-grid">
-                    <div class="document-card" onclick="openDocument('Devoirs-surveilles/ds_1.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">Devoir surveillé 1</div>
-                        <div class="document-description">Évaluation complète - Trimestre 1</div>
-                    </div>
-                    <div class="document-card" onclick="openDocument('Devoirs-surveilles/ds_2.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">Devoir surveillé 2</div>
-                        <div class="document-description">Évaluation complète - Trimestre 2</div>
-                    </div>
-                </div>
+            <div class="documents-grid">
+              <div class="document-card" onclick="openDocument('Slides/chap1_slides.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Chapitre 1 -
+                  Compléments d'algèbre linéaire</div>
+                <div class="document-description">Sommes de
+                  sous-espaces, calcul matriciel par bloc,
+                  éléments propres d'un endomorphisme ou d'une matrice</div>
+              </div>
+              <div class="document-card" onclick="openDocument('Slides/chap2_slides.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Chapitre 2 -
+                  Réduction des endomorphismes</div>
+                <div class="document-description">Polynôme
+                  caractéristiques, diagonalisation et
+                  trigonalisation, utilisation des polynômes d'endomorphismes</div>
+              </div>
+              <div class="document-card" onclick="openDocument('Slides/chap3_slides.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Chapitre 3 -
+                  Espaces vectoriels normés</div>
+                <div class="document-description">Norme sur
+                  un espace vectoriel, suites et topologie d'un
+                  espace vectoriel normé</div>
+              </div>
+	      <div class="document-card" onclick="openDocument('Slides/chap4_slides.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Chapitre 4 -
+                  Continuité des fonctions dans les evn,
+                  dimension finie</div>
+                <div class="document-description">Limite d'une
+                  fonction, continuité et linéarité, cas de la
+                  dimension finie.</div>
+              </div>
             </div>
-
-            <!-- Page Devoirs maison -->
-            <div class="page" id="devoirs-maison">
-                <div class="page-header">
-                    <h1>🏠 Devoirs maison</h1>
-                    <p>Travaux à réaliser à la maison et projets</p>
-                </div>
-                <div class="documents-grid">
-                    <div class="document-card" onclick="openDocument('Devoirs-maison/dm_1.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">Devoir maison 1</div>
-                        <div class="document-description">Recherche approfondie sur les fonctions</div>
-                    </div>
-                    <div class="document-card" onclick="openDocument('Devoirs-maison/dm_2.pdf')">
-                        <div class="pdf-icon">📄</div>
-                        <div class="document-title">Devoir maison 2</div>
-                        <div class="document-description">Projet sur la géométrie analytique</div>
-                    </div>
-                </div>
+          </div>
+	  
+          <!-- Page Exercices -->
+          <div class="page" id="exercices">
+            <div class="page-header">
+              <h1>✏️ Exercices</h1>
+              <p>Exercices d'entraînement et de consolidation</p>
             </div>
-        </main>
-    </div>
-
-    <script>
+            <div class="documents-grid">
+              <div class="document-card" onclick="openDocument('Exercices/fiche_exos1.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">
+                  1. Compléments d'algèbre linéaire</div>
+                <div class="document-description">Fiche
+                  d'exercices associée au chapitre 1</div>
+              </div>
+              <div class="document-card" onclick="openDocument('Exercices/exercices_derivation.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Exercices - Dérivation</div>
+                <div class="document-description">Calculs de dérivées et applications</div>
+              </div>
+            </div>
+          </div>
+	  
+          <!-- Page Interrogations -->
+          <div class="page" id="interrogations">
+            <div class="page-header">
+              <h1>🔍 Interrogations</h1>
+              <p>Interrogations courtes et évaluations rapides</p>
+            </div>
+            <div class="documents-grid">
+              <div class="document-card" onclick="openDocument('Interrogations/interro_1.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Interrogation 1</div>
+                <div class="document-description">Évaluation sur les fonctions</div>
+              </div>
+              <div class="document-card" onclick="openDocument('Interrogations/interro_2.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Interrogation 2</div>
+                <div class="document-description">Évaluation sur la dérivation</div>
+              </div>
+            </div>
+          </div>
+	  
+          <!-- Page Devoirs surveillés -->
+          <div class="page" id="devoirs-surveilles">
+            <div class="page-header">
+              <h1>📝 Devoirs surveillés</h1>
+              <p>Devoirs en temps limité et évaluations importantes</p>
+            </div>
+            <div class="documents-grid">
+              <div class="document-card" onclick="openDocument('Devoirs-surveilles/ds_1.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Devoir surveillé 1</div>
+                <div class="document-description">Évaluation complète - Trimestre 1</div>
+              </div>
+              <div class="document-card" onclick="openDocument('Devoirs-surveilles/ds_2.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Devoir surveillé 2</div>
+                <div class="document-description">Évaluation complète - Trimestre 2</div>
+              </div>
+            </div>
+          </div>
+	  
+          <!-- Page Devoirs maison -->
+          <div class="page" id="devoirs-maison">
+            <div class="page-header">
+              <h1>🏠 Devoirs maison</h1>
+              <p>Travaux à réaliser à la maison et projets</p>
+            </div>
+            <div class="documents-grid">
+              <div class="document-card" onclick="openDocument('Devoirs-maison/dm_1.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Devoir maison 1</div>
+                <div class="document-description">Recherche approfondie sur les fonctions</div>
+              </div>
+              <div class="document-card" onclick="openDocument('Devoirs-maison/dm_2.pdf')">
+                <div class="pdf-icon">📄</div>
+                <div class="document-title">Devoir maison 2</div>
+                <div class="document-description">Projet sur la géométrie analytique</div>
+              </div>
+            </div>
+          </div>
+      </main>
+      </div>
+      
+      <script>
         // Gestion de la navigation
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-link');
             const pages = document.querySelectorAll('.page');
-
+	    
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -210,7 +257,7 @@
                 });
             });
         });
-
+	
         // Fonction pour ouvrir un document avec gestion des sous-répertoires
 	function openDocument(filepath) {
             // Tentative d'ouverture du document
@@ -225,7 +272,7 @@
             // Optionnel : afficher un message d'erreur si le fichier n'existe pas
             // Cette vérification peut être ajoutée selon vos besoins
         }
-
+	
         // Animation d'entrée
         window.addEventListener('load', function() {
             const sidebar = document.querySelector('.sidebar');
@@ -249,6 +296,6 @@
                 }, 200);
             }, 100);
         });
-    </script>
-</body>
+      </script>
+  </body>
 </html>
