@@ -15,6 +15,9 @@
           <li class="nav-item">
             <a href="#" class="nav-link active" data-page="home">🏠 Accueil</a>
           </li>
+	  <li class="nav-item">
+            <a href="#" class="nav-link" data-page="rentree">🏫 Rentrée</a>
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link" data-page="cours">📖 Cours</a>
           </li>
@@ -45,12 +48,16 @@
             <p>Ressources pédagogiques organisées par rubriques</p>
             
             <div class="welcome-features">
-              <div class="feature" data-page="cours">
+              <div class="feature" data-page="rentree">
+                <h3>🏫 Rentrée</h3>
+                <p>Divers documents distribués à la rentrée et en cours d'année</p>
+              </div>
+	      <div class="feature" data-page="cours">
                 <h3>📖 Cours</h3>
                 <p>Polycopiés de cours, chapitre par chapitre</p>
               </div>
 	      <div class="feature" data-page="slides">
-                <h3>💻 Slides</h3 >
+                <h3> 💻 Slides</h3>
                 <p>Diapositives de cours associées à chaque chapitre</p>
               </div>
               <div class="feature" data-page="exercices">
@@ -73,7 +80,30 @@
             </div>
           </div>
 	</div>
-	  
+
+	<!-- Page Rentrée -->
+        <div class="page" id="rentree">
+          <div class="page-header">
+            <h1>📖 Rentrée et document divers</h1>
+            <p>Divers documents distribués à la rentrée et en cours d'année</p>
+          </div>
+          <div class="documents-grid">
+            <div class="document-card" onclick="openDocument('Rentree/calendrier.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Calendrier</div>
+              <div class="document-description">Organisation de
+              l'année pour le cours de mathématiques</div>
+            </div>
+            <div class="document-card" onclick="openDocument('Rentree/annotations.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Annotations de correction</div>
+              <div class="document-description">Liste des abréviations
+              d'annotations utilisées pour la correction des devoirs</div>
+            </div>           
+          </div>
+        </div>
+
+	
         <!-- Page Cours -->
         <div class="page" id="cours">
           <div class="page-header">
@@ -87,7 +117,7 @@
                   Compléments d'algèbre linéaire</div>
               <div class="document-description">Sommes de
                 sous-espaces, calcul matriciel par bloc,
-                éléments propres d'un endomorphisme ou d'une matrice</div>
+                éléments propres d'un endomorphisme ou d'une matrice.</div>
             </div>
             <div class="document-card" onclick="openDocument('Cours/chapitre2.pdf')">
               <div class="pdf-icon">📄</div>
@@ -95,7 +125,7 @@
                 Réduction des endomorphismes</div>
               <div class="document-description">Polynôme
                 caractéristiques, diagonalisation et
-                trigonalisation, utilisation des polynômes d'endomorphismes</div>
+                trigonalisation, utilisation des polynômes d'endomorphismes.</div>
             </div>
             <div class="document-card" onclick="openDocument('Cours/chapitre3.pdf')">
               <div class="pdf-icon">📄</div>
@@ -103,7 +133,7 @@
                 Espaces vectoriels normés</div>
               <div class="document-description">Norme sur
                 un espace vectoriel, suites et topologie d'un
-                espace vectoriel normé</div>
+                espace vectoriel normé.</div>
             </div>
 	    <div class="document-card" onclick="openDocument('Cours/chapitre4.pdf')">
               <div class="pdf-icon">📄</div>
@@ -114,48 +144,94 @@
                 fonction, continuité et linéarité, cas de la
                 dimension finie.</div>
             </div>
+	    <div class="document-card" onclick="openDocument('Cours/chapitre5.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Chapitre 5 -
+		Suites et séries de fonctions</div>
+              <div class="document-description">Compléments sur les
+              séries numériques, mode de convergence des suites et
+              séries de fonctions, régularité de la limite ou de la somme.</div>
+            </div>
+	    <div class="document-card" onclick="openDocument('Cours/chapitre6.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Chapitre 6 -
+                Séries entièrese</div>
+              <div class="document-description">Rayon de convergence,
+              opération sur les séries entières, propriétés de
+              régularités, développement en série entière.</div>
+            </div>
+	    <div class="document-card" onclick="openDocument('Cours/chapitre7.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Chapitre 7 -
+                Fonctions vectorielles à une variable</div>
+              <div class="document-description">Dérivabilité,
+              opérations, intégration sur un segment, formules de Taylor.</div>
+            </div>
           </div>
         </div>
 
 	<!-- Page Slides -->
         <div class="page" id="slides">
           <div class="page-header">
-            <h1>📖 Slides</h1>
+            <h1>💻 Slides</h1>
             <p>Diapositives de cours associées à chaque chapitre</p>
           </div>
           <div class="documents-grid">
             <div class="document-card" onclick="openDocument('Slides/chap1_slides.pdf')">
-              <div class="pdf-icon">📄</div>
+              <div class="pdf-icon">🎬</div>
               <div class="document-title">Chapitre 1 -
                 Compléments d'algèbre linéaire</div>
               <div class="document-description">Sommes de
                 sous-espaces, calcul matriciel par bloc,
-                éléments propres d'un endomorphisme ou d'une matrice</div>
+                éléments propres d'un endomorphisme ou d'une matrice.</div>
             </div>
             <div class="document-card" onclick="openDocument('Slides/chap2_slides.pdf')">
-              <div class="pdf-icon">📄</div>
+              <div class="pdf-icon">🎬</div>
               <div class="document-title">Chapitre 2 -
                 Réduction des endomorphismes</div>
               <div class="document-description">Polynôme
                 caractéristiques, diagonalisation et
-                trigonalisation, utilisation des polynômes d'endomorphismes</div>
+                trigonalisation, utilisation des polynômes d'endomorphismes.</div>
             </div>
             <div class="document-card" onclick="openDocument('Slides/chap3_slides.pdf')">
-              <div class="pdf-icon">📄</div>
+              <div class="pdf-icon">🎬</div>
               <div class="document-title">Chapitre 3 -
                 Espaces vectoriels normés</div>
               <div class="document-description">Norme sur
                 un espace vectoriel, suites et topologie d'un
-                espace vectoriel normé</div>
+                espace vectoriel normé.</div>
             </div>
 	    <div class="document-card" onclick="openDocument('Slides/chap4_slides.pdf')">
-              <div class="pdf-icon">📄</div>
+              <div class="pdf-icon">🎬</div>
               <div class="document-title">Chapitre 4 -
                 Continuité des fonctions dans les evn,
                 dimension finie</div>
               <div class="document-description">Limite d'une
                 fonction, continuité et linéarité, cas de la
                 dimension finie.</div>
+	    </div>
+	    <div class="document-card" onclick="openDocument('Slides/chap5_slides.pdf')">
+              <div class="pdf-icon">🎬</div>
+              <div class="document-title">Chapitre 5 -
+		Suites et séries de fonctions</div>
+              <div class="document-description">Compléments sur les
+		séries numériques, mode de convergence des suites et
+		séries de fonctions, régularité de la limite ou de la somme.</div>
+            </div>
+	    <div class="document-card" onclick="openDocument('Slides/chap6_slides.pdf')">
+              <div class="pdf-icon">🎬</div>
+              <div class="document-title">Chapitre 6 -
+                Séries entières</div>
+              <div class="document-description">Rayon de convergence,
+		opération sur les séries entières, propriétés de
+              régularités, développement en série entière.</div>
+            </div>
+	    <div class="document-card" onclick="openDocument('Slides/chap7_slides.pdf')">
+              <div class="pdf-icon">🎬</div>
+              <div class="document-title">Chapitre 7 -
+                Fonctions vectorielles à une variable</div>
+              <div class="document-description">Dérivabilité,
+		opérations, intégration sur un segment, formules de Taylor.</div>
             </div>
           </div>
         </div>
@@ -191,15 +267,42 @@
             <p>Interrogations hebdomadaires pour chaque chapitre</p>
           </div>
           <div class="documents-grid">
-            <div class="document-card" onclick="openDocument('Interrogations/interro_1.pdf')">
+            <div class="document-card" onclick="openDocument('Interrogations/chap1_interrogation.pdf')">
               <div class="pdf-icon">📄</div>
-              <div class="document-title">Interrogation 1</div>
-              <div class="document-description">Évaluation sur les fonctions</div>
+              <div class="document-title">Interrogation n°1</div>
+              <div class="document-description">Compléments d'algèbre linéaire</div>
             </div>
-            <div class="document-card" onclick="openDocument('Interrogations/interro_2.pdf')">
+            <div class="document-card" onclick="openDocument('Interrogations/chap2_interrogation.pdf')">
               <div class="pdf-icon">📄</div>
-              <div class="document-title">Interrogation 2</div>
-              <div class="document-description">Évaluation sur la dérivation</div>
+              <div class="document-title">Interrogation n°2</div>
+              <div class="document-description">Réduction des endomorphismes</div>
+            </div>
+	    <div class="document-card" onclick="openDocument('Interrogations/chap3_interrogation.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Interrogation n°3</div>
+              <div class="document-description">Espaces vectoriels normés</div>
+            </div>
+	    <div class="document-card" onclick="openDocument('Interrogations/chap4_interrogation.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Interrogation n°4</div>
+              <div class="document-description">Continuité dans les
+              evn et dimension finie</div>
+            </div>
+	    <div class="document-card" onclick="openDocument('Interrogations/chap5_interrogation.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Interrogation n°5</div>
+              <div class="document-description">Suites et séries de fonctions</div>
+            </div>
+	    <div class="document-card" onclick="openDocument('Interrogations/chap6_interrogation.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Interrogation n°6</div>
+              <div class="document-description">Séries entières</div>
+            </div>
+	    <div class="document-card" onclick="openDocument('Interrogations/chap7_interrogation.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Interrogation n°7</div>
+              <div class="document-description">Fonctions
+              vectorielles à une variable</div>
             </div>
           </div>
         </div>
