@@ -19,6 +19,18 @@ EXERCICES_DEST_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Site/Exercices
 INTERROGATIONS_SOURCE_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Interrogations/"  # Répertoire contenant interro.tex
 INTERROGATIONS_DEST_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Site/Interrogations/"   # Répertoire de destination pour les interrogations
 
+DS_SOURCE_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/DS/"  # Répertoire contenant ds.tex
+DS_DEST_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Site/DS/"   # Répertoire de destination pour les devoirs surveillés MPI
+
+DSS_SOURCE_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/DS/"  # Répertoire contenant ds.tex
+DSS_DEST_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Site/DS*/"   # Répertoire de destination pour les devoirs surveillés MPI*
+
+DM_SOURCE_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/DM/"  # Répertoire contenant dm.tex
+DM_DEST_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Site/DM/"   # Répertoire de destination pour les devoirs maison MPI
+
+DMS_SOURCE_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/DM/"  # Répertoire contenant dm.tex
+DMS_DEST_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Site/DM*/"   # Répertoire de destination pour les devoirs maison MPI*
+
 def compile_latex(source_dir, tex_file):
     """Compile un fichier LaTeX avec pdflatex"""
     # Changer vers le répertoire source
@@ -114,6 +126,82 @@ def process_interrogation(chapter_num):
     print(f"Fichier créé : {dest_pdf}")
     return True
 
+def process_ds(num):
+    """Traite la compilation pour le mot-clé 'ds'"""
+    tex_file = "ds.tex"
+    pdf_file = "ds.pdf"
+    new_name = f"ds{num}.pdf"
+    
+    # Compilation
+    if not compile_latex(DS_SOURCE_DIR, tex_file):
+        return False
+    
+    # Chemin du PDF généré
+    source_pdf = os.path.join(DS_SOURCE_DIR, pdf_file)
+    dest_pdf = os.path.join(DS_DEST_DIR, new_name)
+    
+    # Déplacement et renommage
+    shutil.move(source_pdf, dest_pdf)
+    print(f"Fichier créé : {dest_pdf}")
+    return True
+
+def process_dss(num):
+    """Traite la compilation pour le mot-clé 'dss'"""
+    tex_file = "ds.tex"
+    pdf_file = "ds.pdf"
+    new_name = f"ds*{num}.pdf"
+    
+    # Compilation
+    if not compile_latex(DSS_SOURCE_DIR, tex_file):
+        return False
+    
+    # Chemin du PDF généré
+    source_pdf = os.path.join(DSS_SOURCE_DIR, pdf_file)
+    dest_pdf = os.path.join(DSS_DEST_DIR, new_name)
+    
+    # Déplacement et renommage
+    shutil.move(source_pdf, dest_pdf)
+    print(f"Fichier créé : {dest_pdf}")
+    return True
+
+def process_dm(num):
+    """Traite la compilation pour le mot-clé 'dm'"""
+    tex_file = "dm.tex"
+    pdf_file = "dm.pdf"
+    new_name = f"dm{num}.pdf"
+    
+    # Compilation
+    if not compile_latex(DM_SOURCE_DIR, tex_file):
+        return False
+    
+    # Chemin du PDF généré
+    source_pdf = os.path.join(DM_SOURCE_DIR, pdf_file)
+    dest_pdf = os.path.join(DM_DEST_DIR, new_name)
+    
+    # Déplacement et renommage
+    shutil.move(source_pdf, dest_pdf)
+    print(f"Fichier créé : {dest_pdf}")
+    return True
+
+def process_dms(num):
+    """Traite la compilation pour le mot-clé 'dms'"""
+    tex_file = "dm.tex"
+    pdf_file = "dm.pdf"
+    new_name = f"dm*{num}.pdf"
+    
+    # Compilation
+    if not compile_latex(DMS_SOURCE_DIR, tex_file):
+        return False
+    
+    # Chemin du PDF généré
+    source_pdf = os.path.join(DMS_SOURCE_DIR, pdf_file)
+    dest_pdf = os.path.join(DMS_DEST_DIR, new_name)
+    
+    # Déplacement et renommage
+    shutil.move(source_pdf, dest_pdf)
+    print(f"Fichier créé : {dest_pdf}")
+    return True
+
 def main():
     # Vérification des arguments
     if len(sys.argv) != 3:
@@ -123,20 +211,28 @@ def main():
     
     keyword = sys.argv[1]
     try:
-        chapter_num = int(sys.argv[2])
+        num = int(sys.argv[2])
     except ValueError:
         print("Le second argument doit être un nombre entier")
         sys.exit(1)
     
     # Traitement selon le mot-clé
     if keyword == "cours":
-        success = process_cours(chapter_num)
+        success = process_cours(num)
     elif keyword == "slides":
-        success = process_slides(chapter_num)
+        success = process_slides(num)
     elif keyword == "exercices":
-        success = process_exercices(chapter_num)
+        success = process_exercices(num)
     elif keyword == "interro":
-        success = process_interrogation(chapter_num)
+        success = process_interrogation(num)
+    elif keyword == "ds":
+        success = process_ds(num)
+    elif keyword == "dss":
+        success = process_dss(num)
+    elif keyword == "dm":
+        success = process_dm(num)
+    elif keyword == "dms":
+        success = process_dms(num) 
     else:
         print(f"Mot-clé '{keyword}' non reconnu")
         print("Mots-clés disponibles: cours, slides")

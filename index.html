@@ -31,10 +31,20 @@
             <a href="#" class="nav-link" data-page="interrogations">🔍 Interrogations</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" data-page="ds">📝 Devoirs surveillés</a>
+            <a href="#" class="nav-link" data-page="ds">📝 Devoirs
+            surveillés (MPI)</a>
+          </li>
+	  <li class="nav-item">
+            <a href="#" class="nav-link" data-page="ds*">📝 Devoirs
+            surveillés (MPI*)</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" data-page="dm">🏠 Devoirs maison</a>
+            <a href="#" class="nav-link" data-page="dm">🏠 Devoirs
+            maison (MPI)</a>
+          </li>
+	  <li class="nav-item">
+            <a href="#" class="nav-link" data-page="dm*">🏠 Devoirs
+            maison (MPI*)</a>
           </li>
         </ul>
       </nav>
@@ -71,11 +81,21 @@
 	      </div>
 	      <div class="feature" data-page="ds">
                 <h3>📝 DS</h3>
-                <p>Devoirs surveillés en temps limité du samedi matin</p>
+                <p>Devoirs surveillés en temps limité du samedi matin
+                pour le groupe MPI</p>
+	      </div>
+	      <div class="feature" data-page="ds*">
+                <h3>📝 DS*</h3>
+                <p>Devoirs surveillés en temps limité du samedi matin
+                pour le groupe MPI*</p>
 	      </div>
 	       <div class="feature" data-page="dm">
                 <h3>🏠 DM</h3>
-                <p>Devoirs maison en temps libre</p>
+                <p>Devoirs maison en temps libre pour le groupe MPI</p>
+	       </div>
+	       <div class="feature" data-page="dm*">
+                <h3>🏠 DM*</h3>
+                <p>Devoirs maison en temps libre pour le groupe MPI*</p>
 	      </div>
             </div>
           </div>
@@ -321,41 +341,85 @@
           </div>
         </div>
 	  
-        <!-- Page Devoirs surveillés -->
+        <!-- Page Devoirs surveillés MPI -->
         <div class="page" id="ds">
           <div class="page-header">
-            <h1>📝 Devoirs surveillés</h1>
-            <p>Devoirs surveillés en temps limité du samedi matin</p>
+            <h1>📝 Devoirs surveillés MPI</h1>
+            <p>Devoirs surveillés en temps limité du samedi matin
+            pour le groupe MPI</p>
           </div>
           <div class="documents-grid">
             <div class="document-card" onclick="openDocument('DS/ds1.pdf')">
               <div class="pdf-icon">📄</div>
               <div class="document-title">Devoir surveillé n°1</div>
-              <div class="document-description">Évaluation complète - Trimestre 1</div>
+              <div class="document-description">Devoir de rentrée,
+              d'une durée de 2h (algèbre et analyse niveau MP2I)</div>
             </div>
             <div class="document-card" onclick="openDocument('DS/ds2.pdf')">
               <div class="pdf-icon">📄</div>
-              <div class="document-title">Devoir surveillé n°2</div>
-              <div class="document-description">Évaluation complète - Trimestre 2</div>
+              <div class="document-title">Devoir surveillé MPI n°2</div>
+              <div class="document-description">Algèbre linéaire et réduction</div>
+            </div>
+          </div>
+        </div>
+
+	 <!-- Page Devoirs surveillés MPI*-->
+        <div class="page" id="ds*">
+          <div class="page-header">
+            <h1>📝 Devoirs surveillés MPI*</h1>
+            <p>Devoirs surveillés en temps limité du samedi matin
+            pour le groupe MPI*</p>
+          </div>
+          <div class="documents-grid">
+            <div class="document-card" onclick="openDocument('DS*/ds*1.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Devoir surveillé n°1</div>
+              <div class="document-description">Devoir de rentrée,
+              d'une durée de 2h (algèbre et analyse niveau MP2I)</div>
+            </div>
+            <div class="document-card" onclick="openDocument('DS*/ds*2.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Devoir surveillé MPI* n°2</div>
+              <div class="document-description">Algèbre linéaire et réduction</div>
             </div>
           </div>
         </div>
 	
-        <!-- Page Devoirs maison -->
+        <!-- Page Devoirs maison MPI-->
         <div class="page" id="dm">
           <div class="page-header">
-            <h1>🏠 Devoirs maison</h1>
-            <p>Devoirs maison en temps libre</p>
+            <h1>🏠 Devoirs maison MPI</h1>
+            <p>Devoirs maison en temps libre pour le groupe MPI</p>
           </div>
           <div class="documents-grid">
             <div class="document-card" onclick="openDocument('DM/dm1.pdf')">
               <div class="pdf-icon">📄</div>
               <div class="document-title">Devoir maison n°1</div>
+              <div class="document-description">Premier DM commun MPI/MPI*</div>
+            </div>
+            <div class="document-card" onclick="openDocument('DM/dm2.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Devoir maison MPI n°2</div>
               <div class="document-description">À compléter</div>
             </div>
-            <div class="document-card" onclick="openDocument('DM/dm_2.pdf')">
+          </div>
+        </div>
+
+	 <!-- Page Devoirs maison MPI*-->
+        <div class="page" id="dm*">
+          <div class="page-header">
+            <h1>🏠 Devoirs maison MPI*</h1>
+            <p>Devoirs maison en temps libre pour le groupe MPI*</p>
+          </div>
+          <div class="documents-grid">
+            <div class="document-card" onclick="openDocument('DM*/dm*1.pdf')">
               <div class="pdf-icon">📄</div>
-              <div class="document-title">Devoir maison n°2</div>
+              <div class="document-title">Devoir maison n°1</div>
+              <div class="document-description">Premier DM commun MPI/MPI*</div>
+            </div>
+            <div class="document-card" onclick="openDocument('DM*/dm*2.pdf')">
+              <div class="pdf-icon">📄</div>
+              <div class="document-title">Devoir maison MPI* n°2</div>
               <div class="document-description">À compléter</div>
             </div>
           </div>
