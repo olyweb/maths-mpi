@@ -9,6 +9,9 @@ import shutil
 COURS_SOURCE_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Cours/"  # Répertoire contenant cours.tex
 COURS_DEST_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Site/Cours/"   # Répertoire de destination pour les chapitres
 
+FICHES_SOURCE_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Cours/"  # Répertoire contenant fiche_recap.tex
+FICHES_DEST_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Site/FichesRecap/"   # Répertoire de destination pour les fiches récapitulatives
+
 
 SLIDES_SOURCE_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Cours/"  # Répertoire contenant slides.tex
 SLIDES_DEST_DIR = "/Users/olivier/Dropbox/Work/Prepa/MPI/Maths/Site/Slides"   # Répertoire de destination pour les slides
@@ -68,6 +71,27 @@ def process_cours(chapter_num):
     shutil.move(source_pdf, dest_pdf)
     print(f"Fichier créé : {dest_pdf}")
     return True
+
+
+def process_fiche_recap(chapter_num):
+    """Traite la compilation pour le mot-clé 'cours'"""
+    tex_file = "fiche_recap.tex"
+    pdf_file = "fiche_recap.pdf"
+    new_name = f"fiche{chapter_num}.pdf"
+    
+    # Compilation
+    if not compile_latex(FICHES_SOURCE_DIR, tex_file):
+        return False
+    
+    # Chemin du PDF généré
+    source_pdf = os.path.join(FICHES_SOURCE_DIR, pdf_file)
+    dest_pdf = os.path.join(FICHES_DEST_DIR, new_name)
+    
+    # Déplacement et renommage
+    shutil.move(source_pdf, dest_pdf)
+    print(f"Fichier créé : {dest_pdf}")
+    return True
+
 
 def process_slides(chapter_num):
     """Traite la compilation pour le mot-clé 'slides'"""
@@ -232,7 +256,9 @@ def main():
     elif keyword == "dm":
         success = process_dm(num)
     elif keyword == "dms":
-        success = process_dms(num) 
+        success = process_dms(num)
+    elif keyword == "fiche":
+        success = process_fiche_recap(num) 
     else:
         print(f"Mot-clé '{keyword}' non reconnu")
         print("Mots-clés disponibles: cours, slides")
