@@ -41,9 +41,9 @@ def compile_latex(source_dir, tex_file):
     os.chdir(source_dir)
     
     try:
-        # Compilation avec pdflatex
+        # Compilation avec pdflatex - utilisation de errors='replace' pour gérer les problèmes d'encodage
         result = subprocess.run(['pdflatex', tex_file], 
-                              capture_output=True, text=True)
+                              capture_output=True, text=True, errors='replace')
         if result.returncode != 0:
             print(f"Erreur lors de la compilation de {tex_file}")
             print(result.stderr)
