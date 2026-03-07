@@ -787,15 +787,6 @@
               <div class="document-description">Mines-Ponts 2019:
               Majoration du rayon spectral de la matrice de Hilbert</div>
             </div>
-	    <div class="document-card" onclick="openDocument('DS/ds8.pdf')">
-              <div class="pdf-icon">📄</div>
-              <div class="document-title">Devoir surveillé MPI n°8</div>
-              <div class="document-description">CCINP 2022 PC:
-              Trois exercices indépendants (réduction d'endomorphisme
-              défini à partir d'une division euclidienne de
-              polynômes, séries dans le jeu de pile ou face infini,
-              expression intégrale de la constante d'Euler</div>
-            </div>
           </div>
         </div>
 
@@ -845,18 +836,11 @@
               <div class="document-description">Mines-Ponts 2005:
               Inégalité relative au déterminant de la somme de deux matrices</div>
             </div>
-	    <div class="document-card" onclick="openDocument('DS*/ds*7.pdf')">
+	    <div class="document-card" onclick="openDocument('DS/ds*7.pdf')">
               <div class="pdf-icon">📄</div>
               <div class="document-title">Devoir surveillé MPI* n°7</div>
               <div class="document-description">Mines-Ponts 2019:
               Majoration du rayon spectral de la matrice de Hilbert</div>
-            </div>
-	    <div class="document-card" onclick="openDocument('DS*/ds*8.pdf')">
-              <div class="pdf-icon">📄</div>
-              <div class="document-title">Devoir surveillé MPI* n°8</div>
-              <div class="document-description">Mines-Ponts 2024:
-              Phénomènes de seuil dans les graphes (algèbre linéaire
-              et probabilités)</div>
             </div>
           </div>
         </div>
